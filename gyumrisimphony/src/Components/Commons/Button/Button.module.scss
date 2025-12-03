@@ -1,0 +1,30 @@
+.btn {
+   cursor: pointer;
+   padding: 5px 15px;
+   font-size: 20px;
+   border-radius: 25px;
+   border: 1px solid #ccc;
+   backdrop-filter: blur(5px);
+   background-color: #ffffff1a;
+   transition: all 0.3s, color 0.3s;
+
+   &:disabled {
+      background-color: #ccc;
+   }
+
+   &:active {
+      transform: scale( 0.95 );
+   }
+
+   &:not(:disabled):hover {
+      transform: scale(1.03);
+   }
+
+   &:active {
+      transform: scale(0.98);
+   }
+
+   &:disabled {
+      cursor: not-allowed;
+   }
+}

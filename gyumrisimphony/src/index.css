@@ -18,9 +18,13 @@ body {
 
 .wrapper {
    margin: 0 auto;
-   background-color:  #fff;
+   background-color: #360a41;
    display: flex;
    flex-direction: column;
+   min-height: 100vh;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
 }
  
 .container {
@@ -69,3 +73,5 @@ button {
    border-right: 3px solid #fff;
    border-left: 3px solid #fff;
 }
+
+
