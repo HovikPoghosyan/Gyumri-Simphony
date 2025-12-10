@@ -18,7 +18,7 @@ function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       <div className = { classNames( styles.languageSwitcher, className )}>
          <Button
             functionality = { () => console.log('language')}
-         >EN <FontAwesomeIcon icon = { faArrowDown } /></Button>
+         >EN<FontAwesomeIcon icon = { faArrowDown } /></Button>
       </div>
    )
 }

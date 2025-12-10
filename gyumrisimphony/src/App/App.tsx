@@ -16,7 +16,7 @@ function App() {
    
    return (
       <div className = "wrapper"
-         // style = {{ backgroundImage: `url(${ imageUrl })` }}
+         style = {{ backgroundImage: `url(${ imageUrl })` }}
       >
             <Header />
             <Outlet />

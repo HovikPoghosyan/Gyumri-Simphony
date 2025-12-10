@@ -5,10 +5,11 @@
 
 .container {
    background-color: rgba(255, 255, 255, 0.1);
-   margin-top: 10px;
    backdrop-filter: blur(5px);
    padding: 9px 10px;
    border-radius: 15px;
+   margin-top: 12px;
+   width: calc(100% - 18px);
    position: relative;
    display: flex;
    justify-content: space-between;
@@ -18,7 +19,7 @@
 .title {
    font-family: "Georgia Pro";
    color: #fff;
-   font-size: 40px;
+   font-size: 35px;
    position: absolute;
    left: 0;
    right: 0;
