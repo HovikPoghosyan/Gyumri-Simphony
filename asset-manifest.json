@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Gyumri-Simphony/static/css/main.c9e89483.css",
-    "main.js": "/Gyumri-Simphony/static/js/main.127fbae5.js",
-    "index.html": "/Gyumri-Simphony/index.html",
-    "main.c9e89483.css.map": "/Gyumri-Simphony/static/css/main.c9e89483.css.map",
-    "main.127fbae5.js.map": "/Gyumri-Simphony/static/js/main.127fbae5.js.map"
+    "main.css": "/Gyumri-Simphony/homepage/static/css/main.c9e89483.css",
+    "main.js": "/Gyumri-Simphony/homepage/static/js/main.d4a24b33.js",
+    "index.html": "/Gyumri-Simphony/homepage/index.html",
+    "main.c9e89483.css.map": "/Gyumri-Simphony/homepage/static/css/main.c9e89483.css.map",
+    "main.d4a24b33.js.map": "/Gyumri-Simphony/homepage/static/js/main.d4a24b33.js.map"
   },
   "entrypoints": [
     "static/css/main.c9e89483.css",
-    "static/js/main.127fbae5.js"
+    "static/js/main.d4a24b33.js"
   ]
 }
