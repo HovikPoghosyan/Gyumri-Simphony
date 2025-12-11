@@ -3,6 +3,7 @@
     "baseUrl": "src",
     "paths": {
       "store/*": ["store/*"],
+      "images/*": ["public/Images/*"],
       "components/*": ["components/*"],
       "utils/*": ["utils/*"]
     },

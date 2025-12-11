@@ -1,0 +1,36 @@
+.btn {
+   cursor: pointer;
+   padding: 5px 15px;
+   font-size: 20px;
+   line-height: 20px;
+   border: 1px solid #FFF;
+   background-color: rgba($color: #ffffff, $alpha: 0.3);
+   backdrop-filter: blur(10px);
+   transition: all 0.3s, color 0.3s;
+   color: #fff;
+   font-weight: 400;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   // &:disabled {
+   //    background-color: #ccc;
+   // }
+
+   // &:active {
+   //    transform: scale( 0.95 );
+   // }
+
+   // &:not(:disabled):hover {
+   //    transform: scale(1.03);
+   // }
+
+   // &:active {
+   //    transform: scale(0.98);
+   // }
+
+   // &:disabled {
+   //    cursor: not-allowed;
+   // }
+}

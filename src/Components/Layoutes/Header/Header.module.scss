@@ -1,0 +1,43 @@
+.header {
+   display: flex;
+   flex-direction: row;
+   backdrop-filter: blur(10px);
+   background-color: rgba(rgb(0, 0, 0), 0.1);
+   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
+   margin-bottom: 25px;
+}
+
+.container {
+   margin: 25px auto;
+   display: flex;
+   justify-content: space-between;
+}
+
+.title {
+   font-family: Georgia, serif;
+   font-weight: 400;
+   color: #fff;
+   font-size: 35px;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   width: fit-content;
+   height: fit-content;
+}
+
+.languageSwitcher {
+   display: inline-flex;
+}
+
+.languageSwitcher {
+   border-radius: 30px;
+   overflow: hidden;
+   padding: 5px 19px;
+}
+
+.flag {
+   border-radius: 10px ;
+}
