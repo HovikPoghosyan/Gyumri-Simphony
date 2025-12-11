@@ -1,7 +1,7 @@
 {
   "name": "gyumrisimphony",
   "version": "0.1.0",
-  "homepage": "https://hovikpoghosyan.github.io/Gyumri-Simphony/homepage",
+  "homepage": "https://hovikpoghosyan.github.io/Gyumri-Simphony/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
