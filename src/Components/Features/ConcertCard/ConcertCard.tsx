@@ -5,11 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Button from 'Components/Commons/Button/Button';
+import LocationIcon from 'assets/Icons/LocationIcon';
 import ConcertCardPersonButton from 'Components/Commons/ConcertCardPersonButton/ConcertCardPersonButton';
 
 import styles from './ConcertCard.module.scss';
 
-function ConcertCard() {
+interface ConcertCardProps {
+   imageUrl: string;
+   data: string;
+}
+
+
+function ConcertCard({ imageUrl, data }: ConcertCardProps) {
    
    library.add( far );
    library.add( fas );
@@ -17,12 +24,12 @@ function ConcertCard() {
 
    const infoArray = [
       { 
-         icon: <FontAwesomeIcon color='#9b18fa' className={ styles.infoIcon } icon = { ['far', 'clock'] } />, 
+         icon: <FontAwesomeIcon color='#9d08ed' className={ styles.infoFaIcon } icon = { ['far', 'clock'] } />, 
          name: '10:00 PM', 
          functionality: () => console.log('click') 
       },
       { 
-         icon: <FontAwesomeIcon color='#9b18fa' className={ styles.infoIcon } icon = { ['fas', 'map-location-dot'] } />, 
+         icon: <LocationIcon className={ styles.infoIcon }  size={20} />, 
          name: 'Gyumri', 
          functionality: () => console.log('click') 
       },
@@ -32,13 +39,13 @@ function ConcertCard() {
       <div className = { styles.concertCard }>
          <div className = { styles.imageWrapper }>
             <img 
-               src = { "https://www.bsu.edu/-/media/www/departmentalcontent/musicschool/images/ensembles/bsso-2024-robbins.jpeg?sc_lang=en&hash=C7E16D07856C1F3790F2A59C29DA4985B16976A1" }
+               src={ imageUrl }
                className = { styles.image }
             />
          </div>
          <h3 
             className = { styles.title }
-         >Opera Gala Night</h3>
+         >Cello Evening</h3>
          <div className = { styles.dateBlock }>
             {
                infoArray.map((info, index) => <Button 
@@ -50,17 +57,18 @@ function ConcertCard() {
             }
          </div>
          <div className = { styles.membersBlock }>
-            <ConcertCardPersonButton position = "Conductor" name = "John Doe" />
-            <ConcertCardPersonButton position = "Pianist" name = "Jane Smith" />
+            <ConcertCardPersonButton position = "Conductor" name = "Armen Kartshyan" />
+            <ConcertCardPersonButton position = "Solist" name = "Artyom Richagov (violin)" />
+            <ConcertCardPersonButton position = "Solist" name = "Aram Badalyan (violin)" />
          </div>
          <Button 
             className = { styles.calendarButton }
             functionality = { () => console.log('Concert Card')}
-         >October 18</Button>
-         <Button 
+         ><FontAwesomeIcon color='#9b18fa' className={ styles.calendarIcon } icon = { ['far', 'calendar'] } />&nbsp; { data }</Button>
+         {/* <Button 
             className = { styles.readMoreButton }
             functionality = { () => console.log('Concert Card')}
-         >Read More</Button>
+         >Read More</Button> */}
       </div>
    )
 

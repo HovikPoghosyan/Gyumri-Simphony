@@ -73,10 +73,10 @@
 } */
 
 .alice-carousel {
-   width: calc( 100% - 170px) !important;
-   margin-bottom: 40px !important;
+   width: calc( 100% - 500px - 140px ) !important;
+   margin-bottom: 65px !important;
 }
 
 .alice-carousel > div:first-child {
-   /* height: 100% !important; */
+   /* height: 100% !important; */;
 }

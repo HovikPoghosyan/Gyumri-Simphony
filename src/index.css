@@ -28,26 +28,27 @@ body {
    background-repeat: no-repeat;
    background: linear-gradient(
       135deg,
-      #c1d0f0 0%,
-      #9aa8ce 40%,
+      #abbbdf 0%,
+      #525e81 40%,
       #839ec6 70%,
       #6078a1 100%
-   )
+   );
 }
  
 .container {
    width: 100%;
    padding: 0 10px;
-   max-width: 1190px;
+   max-width: 1460px;
    margin: 0 auto;
    display: block; 
    position: relative;
 }
 
 .main {
-   /* leave space for the fixed aside (collapsed width = 97px) */
-   margin-left: 97px;
+   overflow: hidden;
+   margin-left: 250px;
    width: calc(100% - 97px);
+   justify-content: center;
 }
 
 a {

@@ -21,13 +21,13 @@ function Header() {
             >
                <img
                   alt="United States"
-                  src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
+                  src="https://icon-library.com/images/british-flag-icon/british-flag-icon-16.jpg"
                   className={ styles.flag }
                />
-               <FontAwesomeIcon 
+               {/* <FontAwesomeIcon 
                   icon = { faAngleDown } 
                   style = {{ marginLeft: '8px' }}
-               />
+               /> */}
             </Button>
          </div>
       </header>

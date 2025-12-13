@@ -24,24 +24,24 @@ const MenuAside: React.FC = () => {
   library.add( fab );
   return (
     <aside
-      className={classNames(styles.menuAside, { [styles.menuAsideIsHovered]: isHovered })}
+      className={classNames(styles.menuAside, { [styles.menuAsideIsHovered]: true })}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
         <MenuRow
           icon={<FontAwesomeIcon color='#fff' icon={['far', 'house']} />}
           title="Home" 
-          fullView={isHovered}
+          fullView={true}
         />
         <MenuRow
           icon={<FontAwesomeIcon color='#fff' icon={['far', 'envelope']} />}
           title="Contact Us" 
-          fullView={isHovered}
+          fullView={true}
         />
         <MenuRow
           icon={<FontAwesomeIcon color='#fff' icon={['fas', 'info']} />}
           title="About Us" 
-          fullView={isHovered}
+          fullView={true}
         />
     </aside>
   );

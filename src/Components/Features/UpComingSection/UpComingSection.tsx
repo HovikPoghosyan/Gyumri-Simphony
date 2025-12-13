@@ -16,11 +16,17 @@ import './Carousel.css';
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
 
 function UpComingSection() {
-   const itemsList = [ <ConcertCard />, <ConcertCard />, <ConcertCard />, <ConcertCard />, <ConcertCard />]
+   const itemsList = [ 
+      <ConcertCard imageUrl='\Images\image1.jpg' data='December 16' />, 
+      <ConcertCard imageUrl='\Images\image2.jpg' data='December 17' />, 
+      <ConcertCard imageUrl='\Images\image2.jpg' data='December 21' />, 
+      <ConcertCard imageUrl='\Images\image3.jpg' data='December 25' />, 
+   ]
    return(
       <section
          className = { styles.upComingSection }
       >  
+         <h2 className={ styles.title }>Upcoming Concerts</h2>
          <AliceCarousel
             items={itemsList}
             mouseTracking
@@ -31,7 +37,7 @@ function UpComingSection() {
                   functionality = { () => console.log('previous concert') }
                   className = { classNames( styles.sliderBtn, styles.prevBtn ) }
                >
-                  <FontAwesomeIcon icon = { faAngleLeft } size = "lg" />
+                  <FontAwesomeIcon icon = { faAngleLeft }/>
                </Button>
             )}
             renderNextButton = {({ isDisabled }) => (

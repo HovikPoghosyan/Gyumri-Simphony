@@ -3,15 +3,15 @@
    flex-direction: column;
    position: absolute;
    top: 0;
-   left: 0;
+   left: 10px;
    z-index: 998;
-   padding: 10px;
-   width: 97px;
-   border-radius: 25px;
+   // padding: 10px;
+   // width: 97px;
+   // border-radius: 25px;
    transition: all 0.3s ease;
-   overflow: hidden;
-   backdrop-filter: blur(10px);
-   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+   // overflow: hidden;
+   // backdrop-filter: blur(10px);
+   // box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 
    &:hover {
    }
@@ -19,7 +19,6 @@
    &IsHovered,
    &.menuAsideIsHovered {
       width: 250px !important;
-      overflow-y: auto;
       max-height: 100%;
       z-index: 9999;
    }

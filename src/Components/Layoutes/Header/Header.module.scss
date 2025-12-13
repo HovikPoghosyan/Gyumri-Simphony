@@ -1,23 +1,25 @@
 .header {
    display: flex;
    flex-direction: row;
-   backdrop-filter: blur(10px);
-   background-color: rgba(rgb(0, 0, 0), 0.1);
-   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
    margin-bottom: 25px;
+   padding: 10px;
 }
 
 .container {
-   margin: 25px auto;
    display: flex;
    justify-content: space-between;
+   backdrop-filter: blur(10px);
+   background-color: rgba(rgb(0, 0, 0), 0.1);
+   padding: 25px 50px;
+   border-radius: 30px;
+   align-items: center;
 }
 
 .title {
    font-family: Georgia, serif;
    font-weight: 400;
    color: #fff;
-   font-size: 35px;
+   font-size: 48px;
    position: absolute;
    left: 0;
    right: 0;
@@ -26,18 +28,26 @@
    margin: auto;
    width: fit-content;
    height: fit-content;
-}
 
-.languageSwitcher {
-   display: inline-flex;
 }
 
 .languageSwitcher {
    border-radius: 30px;
    overflow: hidden;
-   padding: 5px 19px;
+   padding: 5px 15px;
+   height: fit-content;
+   border-width: 0;
+   background-color: rgba($color: #fff, $alpha: 0.1);
+   box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+
+   &:hover {
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+
+   }
 }
 
 .flag {
-   border-radius: 10px ;
+   width: 30px;
+   height: 30px;
+   object-fit: cover;
 }
