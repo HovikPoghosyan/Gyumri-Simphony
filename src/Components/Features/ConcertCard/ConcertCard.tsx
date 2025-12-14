@@ -57,9 +57,9 @@ function ConcertCard({ imageUrl, data }: ConcertCardProps) {
             }
          </div>
          <div className = { styles.membersBlock }>
-            {/* <ConcertCardPersonButton position = "Conductor" name = "Armen Kartshyan" />
-            <ConcertCardPersonButton position = "Solist" name = "Artyom Richagov (violin)" />
-            <ConcertCardPersonButton position = "Solist" name = "Aram Badalyan (violin)" /> */}
+            <ConcertCardPersonButton position = "Conductor" name = "Armen Kartshyan" />
+            <ConcertCardPersonButton position = "Solist" name = "Artyom Richagov" />
+            <ConcertCardPersonButton position = "Solist" name = "Aram Badalyan" />
          </div>
          <Button 
             className = { styles.calendarButton }
