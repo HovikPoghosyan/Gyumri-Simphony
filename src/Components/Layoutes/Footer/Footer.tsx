@@ -13,7 +13,7 @@ import styles from './Footer.module.scss';
 
 function Footer() {
    return (
-      <footer className={ styles.footer }>
+      <footer id = "Footer" className={ styles.footer }>
          <div className = { classNames( 'container', styles.container ) } >
             <div className={ styles.column }>
                <h4 className={ styles.title }>About Orchestra</h4>

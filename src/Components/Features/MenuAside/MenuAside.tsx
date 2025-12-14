@@ -36,11 +36,13 @@ const MenuAside: React.FC = () => {
         <MenuRow
           icon={<FontAwesomeIcon color='#fff' icon={['far', 'envelope']} />}
           title="Contact Us" 
+          href="#Footer"
           fullView={true}
         />
         <MenuRow
           icon={<FontAwesomeIcon color='#fff' icon={['fas', 'info']} />}
           title="About Us" 
+          href="#Footer"
           fullView={true}
         />
     </aside>
