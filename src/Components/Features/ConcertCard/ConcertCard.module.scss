@@ -11,6 +11,7 @@
    margin: auto;
    background-color: rgba($color: #f8f6e4, $alpha: 1);
    width: 100%;
+   padding-bottom: 45px;
 }
 
 
@@ -59,10 +60,9 @@
 .title {
    color: #032145;
    font-family: Georgia, serif;
-   font-size: 35px;
-   line-height: 35px;
+   font-size: 45px;
+   // line-height: 35px;
    margin: 30px 0px;
-   font-weight: 400;
    font-weight: 600;
 }
 

@@ -1,13 +1,14 @@
 .concertCardPersonButton {
-   background-color: rgba($color: #000000, $alpha: 0);
+   background-color: rgba($color: #000000, $alpha: 0.04);
+   padding: 25px;
    display: flex;
    flex-direction: column;
    width: fit-content;
-   justify-content: flex-start;
+   cursor: pointer;
+   box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
-   margin-right: 10px;
    color: white;
    border: 5px solid #9d08ed;
    width: 60px;
@@ -15,20 +16,24 @@
    border-radius: 40px;
    overflow: hidden;
    background-color: rgba($color: #9d08ed, $alpha: 1.0);
+
 }
 
 .info {
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
+   align-items: center;
    color: #000000;
 }
 
 .position {
    color: rgba($color: #032145, $alpha: 0.6);
+   text-wrap: nowrap;
+   width: 80%;
    text-align: center;
-   width: 100%;
-   margin: 15px 0 5px 0;
+   margin: 10px 0 15px 0;
+   padding-bottom: 5px;
+   border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
 }
 
 .name {
