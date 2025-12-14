@@ -73,7 +73,7 @@
 } */
 
 .alice-carousel {
-   width: calc( 100% - 500px - 140px ) !important;
+   width: calc( 100% - 400px - 140px ) !important;
    margin-bottom: 65px !important;
 }
 

@@ -38,7 +38,7 @@ body {
 .container {
    width: 100%;
    padding: 0 10px;
-   max-width: 1460px;
+   max-width: 1620px;
    margin: 0 auto;
    display: block; 
    position: relative;
@@ -46,8 +46,8 @@ body {
 
 .main {
    overflow: hidden;
-   margin-left: 250px;
-   width: calc(100% - 97px);
+   margin-left: 200px;
+   width: calc(100% - 200px);
    justify-content: center;
 }
 
@@ -64,29 +64,39 @@ button {
    border: 0;
 }
 
+/* Scrollbar width */
 ::-webkit-scrollbar {
-   width: 13px;
+  width: 24px;
 }
 
+/* TRACK — BLUE BACKGROUND + 5 STRONG VERTICAL STAFF LINES */
 ::-webkit-scrollbar-track {
-   background-color: transparent;
+  background:
+    #6078a1; /* blue background */
 }
 
+/* THUMB — MUSIC NOTE SYMBOL */
 ::-webkit-scrollbar-thumb {
-   background-color: rgba( 0, 0, 0, 0.5);
-   border-radius: 7px;
+   background-image: url("/public/Images/violinKey.svg");
+   background-repeat: no-repeat;
+   background-size: 50px;
+   background-position: -13px 0;
+   width: 60px;
+   height: 60px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-   background-color: #000000b3;
+/* NOTE SYMBOL */
+::-webkit-scrollbar-thumb::after {
+  content: "fajefjeh";
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  display: block;
+  text-align: center;
+  line-height: 40px;
 }
 
-
-::-webkit-scrollbar-thumb {
-   border-top: 3px solid #fff;
-   border-bottom: 3px solid #fff;
-   border-right: 3px solid #fff;
-   border-left: 3px solid #fff;
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover::after {
+  transform: scale(1.2);
 }
-
-

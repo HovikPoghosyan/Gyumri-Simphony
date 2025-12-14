@@ -13,9 +13,6 @@
    width: 100%;
 
    
-   &:hover .image {
-      transform: scale(1.03);
-   }
 }
 
 
@@ -47,6 +44,11 @@
    width: 100%;
    object-fit: cover;
    transition: all 0.4s;
+
+   
+   &:hover .image {
+      transform: scale(1.03);
+   }
 
 }
 

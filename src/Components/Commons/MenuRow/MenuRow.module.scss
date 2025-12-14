@@ -1,13 +1,12 @@
 .menuAsideRow {
    
    cursor: pointer;
-   font-size: 20px;
+   font-size: 14px;
    line-height: 20px;
    // border: 1px solid #ccc;
    backdrop-filter: blur(5px);
    background-color: rgba($color: #fff, $alpha: 0.1);
    transition: all 0.3s, color 0.3s;
-   padding: 5px;
    transition: border 0s;
    color: #fff;   
    font-weight: 400;
@@ -79,27 +78,19 @@
    }
 
    &Btn {
-      font-size: 16px;
-      line-height: 20px;
-      font-weight: 600;
-      color: rgba(44, 62, 80, 0.5);
-      border-radius: 50px;
    }
 }
 
 
 .logo {  
-   min-width: 39px;
    text-align: center;
-   // display: inline-flex;
-   // width: 100%;
-   // justify-content: center;
-   // justify-content: center;
+   font-size: 18px;
+   margin-right: 5px;
 }
 
 .content {
    display: none;
-   // justify-content: space-between;
+   font-size: 18px;
    color: #fff;
    text-wrap: nowrap;
 }
