@@ -19,7 +19,7 @@ function UpComingSection() {
    const itemsList = [ 
       <ConcertCard title = "Violin Concerts" time='18 : 00' location='Gyumri, Ozanyan 1 (Hayordyats tun)' imageUrl='\Images\image2.jpg' data='December 16' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Artyom Richagov (violin)'}, { position: 'Soloist', name: 'Armen Badalyan (violin)'}]} />, 
       <ConcertCard title = "Violin Concerts" time='18 : 00' location='Vanadzor, Tigran Metsi Ave. 2' imageUrl='\Images\image2.jpg' data='December 17' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Artyom Richagov (violin)'}, { position: 'Soloist', name: 'Armen Badalyan (violin)'}]} />, 
-      <ConcertCard title = "Cello Evening" time='18 : 00' location='Gyumri, Ozanyan 1(Hayordyats tun)' imageUrl='\Images\image3.jpg' data='December 21' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Lianna Karapetyan (cello)'}, { position: 'Soloist', name: 'Levon Arakelyan (cello)'}]} />, 
+      <ConcertCard title = "Cello Evening" time='18 : 00' location='Gyumri, Ozanyan 1(Hayordyats tun)' imageUrl='\Images\image3.jpg' data='December 21' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Lyana Ulikhanyan (cello)'}, { position: 'Soloist', name: 'Levon Arakelyan (cello)'}]} />, 
       <ConcertCard title = "New Years Miracle" time='14 : 00' location='Gyumri, Ozanyan 1(Hayordyats tun)' imageUrl='\Images\image4.jpg' data='December 25' members={[{ position: 'Conductor', name: 'Ruben Asatryan'}, ]} />, 
    ]
    return(
