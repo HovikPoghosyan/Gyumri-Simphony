@@ -17,10 +17,10 @@ import 'react-alice-carousel/lib/scss/alice-carousel.scss';
 
 function UpComingSection() {
    const itemsList = [ 
-      <ConcertCard imageUrl='\Images\image1.jpg' data='December 16' />, 
-      <ConcertCard imageUrl='\Images\image2.jpg' data='December 17' />, 
-      <ConcertCard imageUrl='\Images\image2.jpg' data='December 21' />, 
-      <ConcertCard imageUrl='\Images\image3.jpg' data='December 25' />, 
+      <ConcertCard time='18:00' location='Gyumri, Ozanyan 1(Hayordyats tun)' imageUrl='\Images\image2.jpg' data='December 16' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Artyom Richagov (violin)'}, { position: 'Soloist', name: 'Armen Badalyan (violin)'}]} />, 
+      <ConcertCard time='18:00' location='Vanadzor Sharl Aznavur`s cultures palace' imageUrl='\Images\image2.jpg' data='December 17' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Artyom Richagov (violin)'}, { position: 'Soloist', name: 'Armen Badalyan (violin)'}]} />, 
+      <ConcertCard time='18:00' location='Gyumri, Ozanyan 1(Hayordyats tun)' imageUrl='\Images\image3.jpg' data='December 21' members={[{ position: 'Conductor', name: 'Armen Kartchyan'}, { position: 'Soloist', name: 'Lianna Karapetyan (cello)'}, { position: 'Soloist', name: 'Levon Arakelyan (cello)'}]} />, 
+      <ConcertCard time='14:00' location='Gyumri, Ozanyan 1(Hayordyats tun)' imageUrl='\Images\image4.jpg' data='December 25' members={[{ position: 'Conductor', name: 'Ruben Asatryan'}, ]} />, 
    ]
    return(
       <section

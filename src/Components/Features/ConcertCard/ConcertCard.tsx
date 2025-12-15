@@ -13,10 +13,13 @@ import styles from './ConcertCard.module.scss';
 interface ConcertCardProps {
    imageUrl: string;
    data: string;
+   members: { position: string, name: string }[];
+   time: string,
+   location: string,
 }
 
 
-function ConcertCard({ imageUrl, data }: ConcertCardProps) {
+function ConcertCard({ imageUrl, data, members, time, location }: ConcertCardProps) {
    
    library.add( far );
    library.add( fas );
@@ -25,12 +28,12 @@ function ConcertCard({ imageUrl, data }: ConcertCardProps) {
    const infoArray = [
       { 
          icon: <FontAwesomeIcon color='#9d08ed' className={ styles.infoFaIcon } icon = { ['far', 'clock'] } />, 
-         name: '10:00 PM', 
+         name: time, 
          functionality: () => console.log('click') 
       },
       { 
          icon: <LocationIcon className={ styles.infoIcon }  size={20} />, 
-         name: 'Gyumri', 
+         name: location, 
          functionality: () => console.log('click') 
       },
    ];
@@ -57,9 +60,9 @@ function ConcertCard({ imageUrl, data }: ConcertCardProps) {
             }
          </div>
          <div className = { styles.membersBlock }>
-            <ConcertCardPersonButton position = "Conductor" name = "Armen Kartshyan" />
-            <ConcertCardPersonButton position = "Solist" name = "Artyom Richagov" />
-            <ConcertCardPersonButton position = "Solist" name = "Aram Badalyan" />
+            {
+               members.map(( member ) => <ConcertCardPersonButton position = { member.position } name = { member.name } />)
+            }
          </div>
          <Button 
             className = { styles.calendarButton }
