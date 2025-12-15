@@ -16,10 +16,11 @@ interface ConcertCardProps {
    members: { position: string, name: string }[];
    time: string,
    location: string,
+   title: string,
 }
 
 
-function ConcertCard({ imageUrl, data, members, time, location }: ConcertCardProps) {
+function ConcertCard({ imageUrl, data, members, time, location, title }: ConcertCardProps) {
    
    library.add( far );
    library.add( fas );
@@ -48,7 +49,7 @@ function ConcertCard({ imageUrl, data, members, time, location }: ConcertCardPro
          </div>
          <h3 
             className = { styles.title }
-         >Cello Evening</h3>
+         >{ title }</h3>
          <div className = { styles.dateBlock }>
             {
                infoArray.map((info, index) => <Button 
