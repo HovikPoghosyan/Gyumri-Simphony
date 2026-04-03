@@ -5,6 +5,7 @@ import Aos from 'aos';
 
 import Header from 'Components/Layoutes/Header/Header';
 import Footer from 'Components/Layoutes/Footer/Footer';
+import MobileMenu from 'Components/Features/MobileMenu/MobileMenu';
 
 import styles from './App.module.scss';
 
@@ -15,16 +16,21 @@ function App() {
    useEffect( () => { Aos.init() }, [] );
    
    return (
-      <div className = "wrapper"
-         // style = {{ backgroundImage: `url(${ imageUrl })` }}
-      >
-            <Header />
-            <Outlet />
-            <Footer />
-         {/* <Suspense fallback = { <LoadingCircle /> }> */}
-         {/* </Suspense> */}
-         {/* <Footer /> */}
-      </div>
+      <>
+         <div className = "wrapper"
+            // style = {{ backgroundImage: `url(${ imageUrl })` }}
+         >
+            
+               <div className="background" />
+               <MobileMenu />
+               <Header />
+               <Outlet />
+               <Footer />
+            {/* <Suspense fallback = { <LoadingCircle /> }> */}
+            {/* </Suspense> */}
+            {/* <Footer /> */}
+         </div>
+      </>
    )
 }
 

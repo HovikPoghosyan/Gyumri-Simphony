@@ -1,0 +1,41 @@
+.snowflake {
+    background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    position: absolute;
+    margin-top: -10px;
+    z-index: 5;
+}
+
+@keyframes fall {
+    0% {
+    transform: translateY(-10px) translateX(0) rotate(0deg);
+    opacity: 0;
+    }
+    10% {
+    opacity: 0.8;
+    }
+    90% {
+    opacity: 0.8;
+    }
+    100% {
+    transform: translateY(100vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+    }
+}
+
+.animateFall {
+    animation: fall linear infinite;
+}
+
+.fixedInset {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 20;
+  overflow: hidden;
+}

@@ -1,23 +1,158 @@
 .concertCardPersonButton {
-   background-color: rgba($color: #000000, $alpha: 0);
+   position: relative;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding: 0;
+   height: 100%;
+   width: min(24vw, 236px);
+   min-width: 164px;
+   border-radius: 16px;
+   overflow: hidden;
+   border: 1px solid rgba(255, 255, 255, 0.7);
+   box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.65),
+      0 10px 24px rgba(126, 102, 145, 0.24);
+   cursor: default;
+   background: rgba(255, 247, 252, 0.9);
+   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+
+   &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.36), transparent 36%);
+      opacity: 0.85;
+   }
+
+   &:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.92);
+      box-shadow:
+         inset 0 1px 0 rgba(255, 255, 255, 0.75),
+         0 14px 30px rgba(125, 99, 146, 0.32);
+
+      .photo {
+         transform: scale(1.035);
+      }
+   }
 }
 
 .icon {
-   margin-right: 10px;
-   color: white;
-   border: 5px solid #5b1e63;
-   width: 40px;
-   height: 40px;
-   border-radius: 25px;
-   overflow: hidden;
-   background-color: rgba($color: #5b1e63, $alpha: 1.0);
+   color: rgba(255, 255, 255, 0.8);
+   width: 100%;
+   min-height: 110px;
+   padding: 1.8rem 0;
+   font-size: clamp(2.1rem, 2.8vw, 3rem);
+   background: linear-gradient(145deg, rgba(112, 84, 124, 0.9), rgba(53, 37, 65, 0.95));
+}
+
+.photo {
+   display: block;
+   width: 100%;
+   height: 68%;
+   aspect-ratio: auto;
+   object-fit: cover;
+   filter: saturate(1.08) contrast(1.05);
+   transition: transform 0.45s ease;
 }
 
 .info {
    display: flex;
    flex-direction: column;
-   align-items: flex-start;
-   color: #000000;
+   justify-content: center;
+   width: 100%;
+   min-height: 32%;
+   padding: 0.52rem 0.68rem 0.6rem;
+   text-align: center;
+   color: #2f2840;
+   background:
+      linear-gradient(to top, rgba(246, 234, 245, 0.97), rgba(255, 250, 255, 0.93));
+   backdrop-filter: blur(3px);
+}
+
+.name {
+   color: rgba(49, 36, 66, 0.98);
+   font-family: 'Manrope', 'Rubik', sans-serif;
+   font-size: clamp(1rem, 1.24vw, 1.78rem);
+   font-weight: 700;
+   line-height: 1.12;
+   letter-spacing: 0.012em;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+.position {
+   color: rgba(91, 105, 124, 0.9);
+   font-family: 'Manrope', 'Rubik', sans-serif;
+   text-transform: uppercase;
+   margin-top: 0.28rem;
+   font-size: clamp(0.74rem, 0.78vw, 1.04rem);
+   letter-spacing: 0.06em;
+   opacity: 0.92;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+@media (min-width: 1024px){
+   .concertCardPersonButton {
+      width: min(20vw, 226px);
+      min-width: 172px;
+   }
+}
+
+
+
+@media (max-width: 1024px) {
+   .concertCardPersonButton {
+      width: min(32vw, 206px);
+      min-width: 154px;
+   }
+}
+
+
+
+@media (max-width: 768px) {
+   .concertCardPersonButton {
+   min-width: 142px;
+   width: min(44vw, 188px);
+
+      &:hover {
+         transform: none;
+
+         .photo {
+            transform: none;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   .concertCardPersonButton {
+      min-width: 136px;
+      width: clamp(136px, calc(50% - 0.22rem), 200px);
+      border-radius: 11px;
+   }
+
+   .photo {
+      height: 66%;
+      aspect-ratio: auto;
+      transform: none;
+   }
+
+   .info {
+      padding: 0.44rem 0.45rem 0.5rem;
+   }
+
+   .name {
+      font-size: clamp(0.8rem, 3.9vw, 1.15rem);
+   }
+
+   .position {
+      margin-top: 0.16rem;
+      font-size: clamp(0.67rem, 3vw, 0.94rem);
+   }
 }

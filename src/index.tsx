@@ -13,9 +13,7 @@ if (!rootElement) throw new Error("Root element not found");
 const root = ReactDOM.createRoot(rootElement);
 const store = configureReduxStore();
 root.render(
-  <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={routesConfig()} />
     </Provider>
-  </React.StrictMode>
 );

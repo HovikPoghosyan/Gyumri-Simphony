@@ -1,8 +1,10 @@
 import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
+import appReducer from './modules/appReducer';
 
 function configureReduxStore(): EnhancedStore {
   const store = configureStore({
     reducer: {
+      app: appReducer,
     },
     middleware: (getDefaultMiddleware: any) =>
       getDefaultMiddleware().concat([]),

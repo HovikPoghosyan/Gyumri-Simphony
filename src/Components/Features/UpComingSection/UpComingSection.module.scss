@@ -1,16 +1,131 @@
 .upComingSection {
+   width: 100%;
+   margin-bottom: 80px;
+}
+
+.carouselWrap {
+   position: relative;
+   width: calc(100% - 400px - 10em);
+   margin: 0 auto;
+}
+
+.embla {
+   overflow: hidden;
+   width: 100%;
+   border-radius: 16px;
+}
+
+.emblaContainer {
+   display: flex;
+}
+
+.emblaSlide {
+   position: relative;
+   min-width: 100%;
+   flex: 0 0 100%;
 }
 
 .sliderBtn {
-   width: 50px;
-   height: 50px;
-   border-radius: 25px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 5vw;
+   height: 5vw;
+   padding: 0;
+   font-size: 2.5vw;
+   border-radius: 5vw;
 }
 
 .prevBtn {
-   // margin-left: -70px;
+   left: -7vw;
 }
 
 .nextBtn {
-   // margin-left: 70px;
+   right: -7vw;
+}
+
+.dots {
+   margin-top: 1.6rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.8rem;
+}
+
+.dot {
+   width: 0.8rem;
+   height: 0.8rem;
+   border-radius: 0.8rem;
+   border: 0;
+   background-color: rgba(255, 255, 255, 0.4);
+   transition: all 0.3s ease;
+   padding: 0;
+}
+
+.dotActive {
+   width: 3.6rem;
+   background-color: rgba(255, 255, 255, 0.95);
+}
+
+.title {
+   width: 100%;
+   text-align: center;
+   color: rgba($color: #fff, $alpha: 1.0);
+   font-size: clamp(8px, 2vw, 20px);
+   margin-bottom: 2vw;
+   font-weight: 200;
+}
+
+
+@media (min-width: 1440px) {
+   .title {
+      margin-bottom: 25px;
+   }
+
+   .carouselWrap {
+      width: calc(100% - 400px - 140px);
+   }
+
+   .sliderBtn {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+      border-radius: 25px;
+   }
+
+   .prevBtn {
+      left: -70px;
+   }
+
+   .nextBtn {
+      right: -70px;
+   }
+}
+
+@media (max-width: 768px) {
+   .title {
+      text-transform: uppercase;
+   }
+
+   .carouselWrap {
+      width: 100%;
+   }
+
+   .sliderBtn {
+      display: none;
+   }
+
+   .dots {
+      margin-top: 1.2rem;
+   }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+   .title {
+      font-size: clamp(8px, 1.5vw, 20px);
+   }
+
+   .carouselWrap {
+      width: calc(100% - 15em);
+   }
 }

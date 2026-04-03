@@ -1,3 +1,12 @@
 .homeContainer {
-    overflow: none !important;
+    overflow: hidden !important;
+}
+
+.main {
+    margin-left: 0px;
+    width: 100%;
+    overflow: visible !important;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }

@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import UpComingSection from 'Components/Features/UpComingSection/UpComingSection';
 import MenuAside from 'Components/Features/MenuAside/MenuAside';
+import EventCalendar from 'Components/Features/EventCalendar/EventCalendar';
 import styles from './Home.module.scss';
 
 function Home() {
@@ -10,12 +11,9 @@ function Home() {
    return(
       <div className = { classNames(styles.homeContainer,  "container" ) } >
          <MenuAside />
-         <main className="main">
+         <main className={ classNames(styles.main, 'main')}>
             <UpComingSection />
-            <UpComingSection />
-            <UpComingSection />
-            <UpComingSection />
-            <UpComingSection />
+            <EventCalendar />
          </main>
       </div>
    )

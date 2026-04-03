@@ -1,8 +1,8 @@
 .footer {
-   backdrop-filter: blur(10px);
-   background-color: rgba(rgb(0, 0, 0), 0.1);
-   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
    margin-top: auto;
+   position: relative;
+   padding: 10px;
+   height: 100%;
 }
 
 .container {
@@ -10,6 +10,13 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   backdrop-filter: blur(10px);
+   background-color: rgba(rgb(0, 0, 0), 0.3);
+   border-radius: 30px;
+   padding: 50px;
+   overflow: hidden;   
+   box-shadow: 0 0 20px rgba(255, 255, 255, 0.5) !important;
+
 }
 
 .column {
@@ -17,27 +24,102 @@
    display: flex;
    flex-direction: column;
    height: 300px;
+   align-items: center;
+   width: fit-content;
+   
 
    &:first-child {
-      flex: 2;
+      // flex: ;
+   }
+
+   &Section {
+      // width: fit-content;
+      align-self: flex-end;
    }
 }
+
 
 .title {
    color: #fff;
    font-family: Georgia, serif;
-   font-size: 20px;
-   line-height: 20px;
+   font-size: clamp(16px, 2.5vw, 32px);
+   line-height: clamp(16px, 2.5vw, 32px);
    margin-bottom: 15px;
-   margin-top: 15px;
+   width: 100%;
+   align-self: flex-start;
+   text-align: center;
    font-weight: 400;
+   padding-bottom: 10px;
+   border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+}
+
+.infoRow {
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   margin-bottom: 10px;
 }
 
 .text {
    color: #ddd;
    font-family: Arial, sans-serif;
-   font-size: 16px;
-   line-height: 20px;
-   margin: 5px 0 0 0;
+   font-size: clamp(12px, 2vw, 16px);
    font-weight: 300;
+   height: fit-content;
+   line-height: clamp(16px, 2vw + 4px, 20px);
+}
+
+.copyRight {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   margin: auto;
+   text-align: center;
+   color: #ddd;
+   font-family: Arial, sans-serif;
+   font-size: clamp(10px, 1.5vw, 14px);
+   font-weight: 300;
+   padding: 15px 0;
+   border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
+   width: 70%;
+
+}
+
+.infoFaIcon {
+   margin-right: 8px;
+   background-color: rgba($color: #fff, $alpha: 0.1);
+   border-radius: 30px;
+   padding: 4px;
+   width: clamp(12px, 2vw, 16px);
+   height: clamp(12px, 2vw, 16px);
+   color: #fff;
+}
+
+.infoLogoIcon {
+   margin-right: 8px;
+   background-color: rgba($color: #fff, $alpha: 0.1);
+   padding: 4px;
+   border-radius: 30px;
+   width: clamp(20px, 2vw + 8px, 24px);
+   height: clamp(20px, 2vw + 8px, 24px);
+   color: #fff;
+}
+
+@media (max-width: 768px) {
+   .container {
+      flex-direction: column;
+      padding: 20px;
+      align-items: flex-start;
+   }
+   .column {
+      align-items: flex-start;
+      margin-bottom: 20px;
+   }
+   .title {
+      text-align: left;
+   }
+   .copyRight {
+      width: calc(100% - 50px);
+   }
 }

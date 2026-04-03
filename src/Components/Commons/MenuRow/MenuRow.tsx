@@ -14,14 +14,15 @@ type MenuRowProps = {
   children?: React.ReactNode;
   fullView?: boolean;
   type?: string;
+  href?: string;
 };
 
-function MenuRow({ title, icon, fullView = true }: MenuRowProps) {
+function MenuRow({ title, icon, fullView = true, href }: MenuRowProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={styles.menuAsideRow}>
-      <div className={classNames(styles.menuAsideRowMain, { [styles.menuAsideRowMainOpen]: isOpen })} onClick={() => setIsOpen(!isOpen)}>
+    <a href={ href } className={styles.menuAsideRow}>
+      <div  className={classNames(styles.menuAsideRowMain, { [styles.menuAsideRowMainOpen]: isOpen })} onClick={() => setIsOpen(!isOpen)}>
         <div className={styles.logo}>{icon}</div>
         <div className={classNames(styles.content, { [styles.displayFlex]: fullView })}>
           {title}
@@ -30,7 +31,7 @@ function MenuRow({ title, icon, fullView = true }: MenuRowProps) {
       {/* <div className={classNames(styles.menuAsideRowModal, { [styles.menuAsideRowModalOpen]: fullView && isOpen })} onClick={() => {}}>
         {children}
       </div> */}
-    </div>
+    </a>
   );
 }
 
