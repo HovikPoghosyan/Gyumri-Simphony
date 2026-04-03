@@ -1,14 +1,19 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import styles from './Logo.module.scss';
 
-function Logo() {
+interface LogoProps {
+   noAnimation?: boolean;
+}
+
+function Logo({ noAnimation = false }: LogoProps) {
    return (
-      <div className = { styles.logo }>
+      <div className = { classNames(styles.logo, { [styles.logoNoAnimation]: noAnimation }) }>
          <img 
-            src="/Images/Logo/LogoIcon.svg"
+            src="/Images/Logo/SLogo.png"
             alt = "GSSO"
-            className = { styles.logoImg } 
+            className = { classNames(styles.logoImg, { [styles.logoImgNoAnimation]: noAnimation }) } 
          />
       </div>
    );

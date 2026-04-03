@@ -45,7 +45,7 @@ function Footer() {
                      <a href='https://www.facebook.com/gyumrisso' target="_blank" className={ styles.infoRow }><FontAwesomeIcon className={ styles.infoFaIcon } icon = { ['fab', 'facebook' ] }/><span className={ styles.text }>@gyumrisso</span></a>                        */}
                   </div>
             </div>
-            <p className={ styles.copyRight }>&copy; 2025 Gyumri State Symphony Orchestra. All rights reserved.</p>
+            <p className={ styles.copyRight }>&copy; 2026 Gyumri State Symphony Orchestra. All rights reserved.</p>
          </div>
       </footer>
    );

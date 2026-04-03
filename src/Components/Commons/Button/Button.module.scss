@@ -34,3 +34,15 @@
    //    cursor: not-allowed;
    // }
 }
+
+
+@media (min-width: 1440px) {
+   .btn {
+      cursor: pointer;
+      padding: 5px 15px;
+      font-size: 25px;
+      line-height: 20px;
+      font-weight: 400;
+      border-radius: 10px;
+   }
+}

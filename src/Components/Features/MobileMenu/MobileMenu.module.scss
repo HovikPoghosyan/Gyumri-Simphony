@@ -1,0 +1,107 @@
+
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    height: 100%;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+.menuContent {
+    margin: 16px;
+    width: clamp(288px, 40vw, 500px);
+    border-radius: 16px;
+    height: var(--menu-height, calc(100vh - 32px));
+    position: absolute;
+    right: 0;
+   background: linear-gradient(135deg, rgba(43, 24, 43, 0.97) 0%, rgba(86, 58, 86, 0.95) 52%, rgba(30, 18, 30, 0.97) 100%);
+    backdrop-filter: blur(40px) saturate(180%);
+   border: 1px solid rgba(181, 135, 179, 0.42);
+   box-shadow: 0 10px 36px rgba(12, 5, 24, 0.72);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: clamp(16px, 2vw, 24px) 16px ;
+   border-bottom: 1px solid rgba(194, 150, 192, 0.32);
+   background: rgba(163, 109, 161, 0.24);
+}
+
+.menuMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.menuFooter {
+    display: flex;
+   border-top: 1px solid rgba(194, 150, 192, 0.32);
+   background: rgba(163, 109, 161, 0.24);
+    margin-top: auto;
+}
+
+.copyRight {
+   text-align: center;
+   color: #f7eef7;
+   font-family: Arial, sans-serif;
+   font-size: clamp(10px, 1.5vw, 14px);
+   font-weight: 300;
+   padding: 15px 0;
+   width: 90%;
+
+}
+
+
+
+.languageSwitcher {
+   border-radius: 50px;
+   overflow: hidden;
+   padding: 0.5vw 1.5vw;
+   height: fit-content;
+   border: 1px solid rgba(205, 163, 203, 0.42);
+   box-shadow: 0 4px 18px rgba(20, 7, 38, 0.45);
+   cursor: pointer;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   box-shadow: 0 0 10px rgba(175, 132, 173, 0.52);
+   backdrop-filter: blur(5px);
+   background-color: rgba($color: #a36da1, $alpha: 0.3);
+
+   &:active {
+      transform: translateY(0);
+   }
+
+   
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+   
+
+   &:hover {
+      width: 100%;
+      transform: scale(1);
+      // border: 1px solid #FFF;
+      // background-color: rgba($color: #fff, $alpha: 0.3);
+      box-shadow: 0 0 14px rgba(212, 174, 210, 0.78);
+   }
+}
+
+.flag {
+   width: clamp(20px, 4vw, 30px);
+   height: clamp(20px, 4vw, 30px);
+   object-fit: cover;
+   border-radius: 50%;
+   box-shadow:none;
+   transition: transform 0.3s ease;
+}

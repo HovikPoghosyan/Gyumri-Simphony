@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
  import { library } from '@fortawesome/fontawesome-svg-core';
 
  import { far } from '@fortawesome/free-regular-svg-icons';
@@ -13,9 +12,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 interface ConcertCardPersonButtonProps {
    position: string;
    name: string;
+   imageUrl?: string;
 }
 
-function ConcertCardPersonButton({ position, name }: ConcertCardPersonButtonProps) {
+function ConcertCardPersonButton({ position, name, imageUrl }: ConcertCardPersonButtonProps) {
 
    library.add( far );
    return (
@@ -23,10 +23,14 @@ function ConcertCardPersonButton({ position, name }: ConcertCardPersonButtonProp
          className = { classNames( styles.concertCardPersonButton ) }
          functionality = { () => console.log('Concert Card Person Button')}
       >
-         <FontAwesomeIcon icon = { [ 'far', 'user']} className ={ styles.icon } />
+         {
+            imageUrl
+               ? <img src={ imageUrl } alt={ name } className={ styles.photo } />
+               : <FontAwesomeIcon icon = { [ 'far', 'user']} className ={ styles.icon } />
+         }
          <div className = { styles.info }>
-            <span className = { styles.position }>{ position }</span>
             <span className = { styles.name }>{ name }</span>
+            <span className = { styles.position }>{ position }</span>
          </div>
       </Button>
    )
